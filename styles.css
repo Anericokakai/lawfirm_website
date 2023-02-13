@@ -1,0 +1,570 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Saira", sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+/* home section */
+.home {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.646), rgba(0, 0, 0, 0.541)),
+    url(./images/empty-floor-front-modern-building.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.logo {
+  font-size: 20px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+
+  background-color: #272727b7;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style: none;
+  padding-right: 30px;
+  font-size: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #ffff;
+  position: relative;
+}
+nav ul li a::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: aliceblue;
+  transform: scaleX(0);
+  transition: 0.5s ease-in-out;
+}
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+nav ul i {
+  visibility: hidden;
+}
+nav i {
+  visibility: hidden;
+}
+
+/* stling the nav for the phone */
+
+@media (max-width: 800px) {
+  nav ul {
+    display: block;
+    position: absolute;
+    height: 100%;
+    background-color: #272727eb;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    transition: 0.3s ease-in;
+    transform: scaleX(0);
+    z-index: 5;
+  }
+  nav ul li {
+    height: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+  }
+
+  nav ul button {
+    margin-top: 5%;
+    cursor: pointer;
+    margin-left: 33%;
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.505);
+    transition: 0.5s ease-in-out;
+    outline: none;
+  }
+  nav ul button:hover {
+    background-color: rgb(80, 78, 78);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  nav ul i {
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    visibility: visible;
+  }
+  nav i {
+    padding-right: 20px;
+    font-size: 20px;
+    color: #ffff;
+    cursor: pointer;
+    visibility: visible;
+  }
+  nav ul.menu {
+    transform: scaleX(1);
+  }
+}
+
+/* info css */
+
+.info {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40%;
+}
+@media (min-width: 801px) {
+  .info {
+    width: max-content;
+  }
+}
+.info h1 {
+  font-size: 60px;
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  text-transform: uppercase;
+}
+.info p {
+  color: #ffff;
+  padding-top: 20px;
+}
+
+/* container css */
+
+.container1 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  left: 50%;
+  bottom: -25%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.container1 .card {
+  
+  width: 360px;
+  min-height: 200px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+
+  background-color: #ffff;
+  margin-left: 10px;
+}
+
+.bn {
+  font-size: 40px;
+  text-align: center;
+}
+.card p {
+  padding-top: 20px;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .container1 {
+    visibility: hidden;
+  }
+}
+@media (min-width: 800px) and (max-width: 1125px) {
+  .container1 .card {
+    width: 250px;
+  }
+}
+
+/* buttons */
+
+@media (max-width: 800px) {
+  .info .contact {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 55%;
+    bottom: -20%;
+    padding: 4px 16px;
+  }
+  .info .about {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 20%;
+    bottom: -20%;
+    padding: 4px 16px;
+  }
+}
+@media (min-width: 801px) {
+  .info .contact {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: -40%;
+    padding: 4px 23px;
+    font-size: 18px;
+  }
+  .info .about {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 20%;
+    bottom: -40%;
+    padding: 4px 23px;
+    font-size: 18px;
+  }
+}
+
+.info .about {
+  background: none;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.info .contact {
+  background-color: #ffe3b3;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/* section two */
+.two {
+  width: 100%;
+  min-height: 90vh;
+  background-color: #b3dee592;
+  padding-top: 7em;
+  padding-left: 5em;
+}
+
+.cardimg {
+  width: 360px;
+  background: linear-gradient(rgba(0, 0, 0, 0.559), rgba(0, 0, 0, 0.578)),
+    url(./images/happyclient3.png);
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.cardimg::after {
+  content: "";
+  position: absolute;
+  left: -2em;
+  top: -2em;
+  background-color: #53d2dc;
+  width: 20px;
+  height: 150px;
+}
+.cardimg::before {
+  content: "";
+  position: absolute;
+  left: -2em;
+  top: -2em;
+  background-color: #53d2dc;
+  width: 150px;
+  height: 20px;
+}
+.container2 {
+  width: 100%;
+
+  display: flex;
+  min-height: 90vh;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.desc {
+  width: 500px;
+}
+.desc h1 {
+  font-size: 45px;
+  padding-bottom: 30px;
+}
+.desc button {
+  margin-left: 40%;
+  margin-top: 10%;
+  padding: 5px 27px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #53d2dc;
+  border: none;
+  transition: 0.5s ease-in-out;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.548);
+}
+.desc button:hover {
+  color: #ffff;
+}
+
+@media (max-width: 940px) {
+  .cardimg {
+    margin-bottom: 40px;
+  }
+  .desc {
+    padding-top: 40px;
+  }
+  .two {
+    padding-left: 0;
+    padding-bottom: 2em;
+  }
+}
+
+/* section 3 */
+
+.three {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  background-color: rgba(220, 223, 233, 0.71);
+}
+.container3 {
+  width: 100%;
+  padding: 2em 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card2 {
+  max-width: 350px;
+  background-color: #ffff;
+  margin-left: 10px;
+  min-height: 300px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.548);
+  padding-left: 1em;
+  margin-bottom: 40px;
+}
+.card2 p {
+  text-align: left;
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+.card2 h4 {
+  padding-top: 3em;
+}
+.corner1 {
+  position: relative;
+}
+
+.corner1::after {
+  content: "";
+  position: absolute;
+  left: -1em;
+  bottom: -1em;
+  background-color: #53d2dc;
+  width: 7px;
+  height: 50px;
+}
+.corner1::before {
+  content: "";
+  position: absolute;
+  left: -1em;
+  bottom: -1em;
+  background-color: #53d2dc;
+  width: 50px;
+  height: 7px;
+}
+
+/* coner 2 */
+.corner2 {
+  position: relative;
+}
+
+.corner2::after {
+  content: "";
+  position: absolute;
+  right: -1em;
+  top: -1em;
+  background-color: #53d2dc;
+  width: 7px;
+  height: 50px;
+}
+.corner2::before {
+  content: "";
+  position: absolute;
+  right: -1em;
+  top: -1em;
+  background-color: #53d2dc;
+  width: 50px;
+  height: 7px;
+}
+
+/* section three */
+.four {
+  width: 100%;
+  min-height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.753), rgba(0, 0, 0, 0.82)),
+    url(./images/workplace-results-professional-report-accounting-during.jpg);
+  display: flex;
+  background-position: bottom;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+.container4{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.container4 h1{
+    color: #ffff;
+    font-size: 50px;
+}
+.container4 p{
+    color: #ffff;
+    padding-top: 5px;
+    padding-bottom: 35px;
+}
+.container4 button{
+    padding: 5px 26px;
+    font-size: 18px;
+    background-color: #53d2dc;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    
+}
+
+/* client section */
+.five{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(220, 223, 233, 0.71);
+}
+.five h1{
+    padding-top: 3em;
+    padding-left: 2em;
+letter-spacing: 2px;
+}
+.five p{
+    padding-left: 2.1em;
+    font-weight: 300;
+    padding-top: 1px;
+}
+.clientimage{
+    width: 70px;
+}
+.client div img{
+    width: 100%;
+    border-radius: 50%;
+}
+.client{
+    display: flex;
+    padding-top: 20px;
+    font-family: "Saira", sans-serif;
+}
+
+.clientdesc{
+
+    margin-left: 20px;
+    
+}
+strong{
+    padding-left: 3em;
+}
+.clientdesc i{
+    margin-right: 5px;
+    color: #53d2dc;
+}
+.downsection{
+    background-color: #ffff;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+.six{
+    position: relative;
+}
+
+.design{
+    width: 300px;
+    min-height: 200px;
+    
+    background-color: #ffff;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container1 a{
+    color: #53d2dc;
+    text-decoration: none;
+}
+.contact2{
+    width: 100%;
+    min-height: 40vh;
+}
+
+
+/* contact page */
+.contacscontainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.opentime{
+    min-width: 270px;
+    max-width: 400px;
+    margin-bottom: 20px;
+    margin: 20px;
+}
+.opentime i{
+    margin-right: 10px;
+}
+
+
+/* email section */
+.six{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.637),rgba(0, 0, 0, 0.619)),url(./images/pexels-romka-\ -2034373.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+/* small screen overal */
+
+@media (max-width:800px) {
+  .info h1{
+    font-size: 50px;
+  }  
+  .cardimg{
+    width: 300px;
+
+  }
+  .container3{
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .card2{
+    box-shadow: none;
+  }
+    
+}
+
+
+
+/* copy right */
+.copyright{
+    text-align: center;
+}
